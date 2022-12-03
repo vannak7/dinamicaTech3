@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamica Vanessa</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+        function valida_entrada() {
+            const url = new URLSearchParams(window.location.search)
+            let acesso = url.get("acesso")
+
+            if (acesso == 1) {
+                document.getElementById("textoEntrada").innerHTML = "Olá! Gostaria de te dar boas vindas a Cervejaria do Pericles. Aqui você encontrará as melhores bebidas do Brasil!"
+                //mostrar mensagem de boas vindas
+            } else {
+                document.getElementById("textoEntrada").innerHTML = "Sinto muito, mas este site só é permitido para maiores de 18 anos!"
+                 //mostrar mensagem tem menos de 18 anos
+            }
+        }
+    </script>
+
+</head>
+<body onload="valida_entrada()">
+    <h1 id="textoEntrada"></h1>
+</body>
+</html>
